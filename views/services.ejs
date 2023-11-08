@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="../" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <title><%= heading %> - Red & Blue Appliances Service</title>
+</head>
+
+<body id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="assets/img/navbar-logo.png" alt="Red & Blue Appliances Service" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ms-1"></i>
+      </button>
+      <div class="logo-text" style="color: white;">Red & Blue Appliances Service</div>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto py-1 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <div class="dropdown-menu bg-red" aria-labelledby="servicesDropdown">
+              <% services = [
+              [ 'refrigerator', 'Refrigerator' ],
+              [ 'hood', 'Hood' ],
+              [ 'dishwasher', 'Dishwasher' ],
+              [ 'stoves', 'Stoves' ],
+              [ 'microwave', 'Microwave' ],
+              [ 'ice_machine', 'Ice Machine' ],
+              [ 'washer_dryer', 'Washer & Dryer' ],
+              [ 'wall_oven', 'Wall Oven' ]
+            ] %>
+              <% services.forEach((service) => { %>
+                <a class="dropdown-item text-white" href="/services/<%= service[0]%>"><%= service[1]%></a>
+              <%})%>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead-->
+  <header class="masthead" style="padding: 10rem 2rem; background-image: url('./assets/img/header-bg-<%= header_bg%>.png');">
+    <div class="container">
+      <div class="masthead-heading text-white" style="padding-top: 6rem; margin-bottom: 1rem;"><%= heading %> Services</div>
+      <div class="masthead-subheading text-white" style="font-size: x-large;"><%= subheading %></div>
+    </div>
+  </header>
+  
+  <!-- Issues -->
+  <section class="page-section" style="padding: 4rem 0 0 0;" id="services">
+    <div class="container px-4">
+      <div class="text-center" style="padding-bottom: 2rem;">
+        <h2 class="section-heading text-uppercase"><%= heading%> REPAIRS & SERVICES</h2>
+      </div>
+      <div class="row" style="align-content: center; justify-content: center;">
+        
+        <div class="col-lg-4">
+          <h4><u>You have any of this?</u></h4> <br>
+          <ul>
+            <% issues.forEach((issue) => { %>
+              <li><%= issue%></li>
+            <%})%>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 my-4" style="opacity: 10%;" ><img src="./assets/icons/service_icon.svg" width="100%" height="100%"/></div>
+
+        <div class="col-lg-4">
+          <h4><u>Do this</u></h4> <br>
+          <div style="font-size: larger; padding: 1rem 0;">
+            Call Us:<br><br> <i class="fa-solid fa-phone-volume px-4"></i>(703) 537-1063 (VA)<br> <i class="fa-solid fa-phone-volume px-4"></i>(571) 992-8670 (MD & DC) <br><br> <center>(or)</center> <br>
+            <center><a href="/contact" class="btn btn-primary bg-blue" style="color: white; font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; font-weight: 800;">
+              <i class="fa-solid fa-truck fa-lg" style=" padding-right: 8px; padding-left: 8px;"></i>
+              Request a Service
+            </a></center>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- Types -->
+  <section class="page-section bg-light" style="padding: 4rem 0;" id="services">
+    <div class="container px-4">
+      <h4 class="section-heading text-uppercase">We Fix Them All, No Matter the Make or Model!</h4>
+
+      <div class="capsules">
+        
+        <% types.forEach((type) => { %>
+          <div class="capsule"><%= type%></div>
+        <%})%>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Locations -->
+  <section class="page-section" style="padding: 4rem 0;" id="services">
+    <div class="container px-0">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Areas we Serve</h2>
+        <h3 class="section-subheading text-muted" style="margin-bottom: 3rem;">Serving the World, One Location at a Time</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 my-4" ><img src="./assets/img/locations.png" width="100%" height="100%"/></div>
+      <div class="col-lg-8" style="display: flex; flex-wrap: wrap; flex-direction: row;">
+        <% locations = ["Aldie", "Alexandria", "Annandale", "Arcola", "Arlington", "Ashburn", "Chantilly", "Dulles", "Dumfries", "Falls Church", "Gainesville", "Great Falls", "Haymarket", "Herndon", "Leesburg", "Lorton", "Manassas", "McLean", "Middleburg", "Nokesville", "Reston", "Springfield", "Sterling", "Triangle", "Vienna", "Woodbridge", "Dale City", "Lake Ridge", "Manassas Park", "North Bethesda", "North Potomac", "Potomac Falls", "Tysons", "Fairfax County", "Loudoun County", "\n"] %>
+        <% locations.forEach((location) => { %>
+          <div class="location"> | <%= location %> </div>
+        <%})%>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer-->
+  <footer class="footer py-4 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-lg-start">Copyright &copy; Red & Blue Appliances Service LLC 2023</div>
+        <div class="col-lg-4 my-3 my-lg-0">
+          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+        </div>
+      </div>
+      <div class="text-center text-blue" style="padding-top: 2rem; font-weight: 900;">RED AND BLUE APPLIANCES SERVICE LLC</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <div class="sticky-button fa-fade">
+    <i class="fa-solid fa-truck fa-lg" style="color: #ffffff; padding-right: 8px; padding-left: 8px;"></i>
+    <a href="/contact">Request a Service</a>
+  </div>
+</body>
+
+</html>

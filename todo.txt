@@ -1,0 +1,1 @@
+services dropdown closes the navbar in mobile view
