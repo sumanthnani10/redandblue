@@ -254,8 +254,6 @@ const servicesView = (req, res) => {
         key,
         appliances[key].heading,
     ]));
-      
-      console.log(list);
 
     appliance = req.params.appliance;
     if(appliance === null || appliance === undefined || appliance === NaN) appliance = res.redirect("/services/refrigerator")
