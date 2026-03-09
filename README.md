@@ -1,8 +1,8 @@
 # Red & Blue Appliances Service
 
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/express-4.18-000000.svg)](https://expressjs.com/)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 A professional appliance repair service website built with Node.js and Express. Browse services by appliance type, learn about the company, and get in touch for same-day repair scheduling.
 
